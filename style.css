@@ -1,0 +1,10 @@
+/*
+version 0.1
+*/
+html {background:#000; color:#ddd; position:relative; font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;}
+body, button {font-size:100%;}
+html, body, img {margin:0; padding:0;}
+img {border:none; display:block; margin:0 auto; text-align:center;}
+nav {position:fixed; bottom:0; left:0; right:0; width:100%; background:#222; border-top:1px #000 solid; z-index:1; box-shadow:inset 0 10px 10px #555;}
+#gui {}
+#loading {position:fixed; z-index:-1; top:0; left:0; right:0; text-align:center; display:block;}
