@@ -1,7 +1,6 @@
 # mockups
 Alternative to mockup hosting sites like qwik.vu and many others that once existed. Host your own mockups. Note to the gungho JavaScript people: It uses jQuery for part of the frontend, as I needed to just get it done ASAP.
 
-/*
 VERSION 0.1
 NOTES:
 * Valid folder names must be alphanumeric, dashes or underscores. No spaces or anything else, otherwise it wont look at it.
@@ -12,4 +11,3 @@ NOTES:
 * The file extension won't be shown for the name of the file
 * No need to worry about caching, it adds a string query to the img src of the file, so when its updated, it will know to regrab the new one if need be
 http://example.com/?x=foldername
-*/
