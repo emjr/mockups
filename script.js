@@ -1,5 +1,5 @@
 /*
-version 0.2
+version 0.3
 */
 $(document).ready(function(e) {
 	var current = 0;
@@ -14,9 +14,32 @@ $(document).ready(function(e) {
 		$('nav').hide(0);	
 		$('body').css('margin-bottom', 0);
 	}
+
+	//LEFT ARROW
+	$('body').keyup(function(evt) {
+  		if(evt.which == 37) {
+			go_previous();
+		}
+	});
+
+	//RIGHT ARROW
+	$('body').keyup(function(evt) {
+  		if(evt.which == 39) {
+			go_next();
+		}
+	});
 	
 	//PREVIOUS
 	$('button#prev').click(function () {
+		go_previous();
+	});
+	
+	//NEXT
+	$('button#next').click(function () {
+		go_next();
+	});
+
+	function go_previous() {
 		if ((current - 1) < 0) {
 			current = total_images - 1;
 		}
@@ -25,10 +48,9 @@ $(document).ready(function(e) {
 		}
 		
 		change_image();
-	});
-	
-	//NEXT
-	$('button#next').click(function () {
+	}
+
+	function go_next() {
 		if ((current + 1) > total_images - 1) {
 			current = 0;
 		}
@@ -37,7 +59,7 @@ $(document).ready(function(e) {
 		}
 		
 		change_image();
-	});
+	}
 	
 	function change_image(){
 		$('img').attr('src', folder + images.names[current] + '?ts=' + images.times[current]);
