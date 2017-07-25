@@ -1,6 +1,6 @@
 <?php
 /*
-VERSION 0.1
+VERSION 0.11
 
 NOTES:
 * Valid folder names must be alphanumeric, dashes or underscores. No spaces or anything else, otherwise it wont look at it.
