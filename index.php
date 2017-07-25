@@ -31,7 +31,7 @@ if (isset($_GET['x']) && !empty($_GET['x']))
         	if (!is_dir($entry))
 			{
 				$entry_pathparts = pathinfo($entry);
-				$extension = $entry_pathparts['extension'];//get extention
+				$extension = strtolower($entry_pathparts['extension']);//get extention, lowercase it so we are case insensitive
 				
 				//check if we have a match
 				$match = in_array($extension, $image_extensions, true);
